@@ -3,6 +3,8 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+const color = ["lightcoral", "#FFC0CB", "#FFE4E1", "#FFB6C1"];
+
 const depth = 11;
 
 const draw = (startX, startY, startDepth, angle, branchWidth) => {
@@ -23,7 +25,7 @@ const draw = (startX, startY, startDepth, angle, branchWidth) => {
 
   if (branchWidth < 2) {
     branchWidth = random(3, 5);
-    ctx.strokeStyle = "pink";
+    ctx.strokeStyle = color[Math.floor(Math.random() * 4)];
   } else {
     ctx.strokeStyle = "black";
   }
